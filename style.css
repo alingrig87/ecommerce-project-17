@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	background-color: lightsteelblue;
+	height: 40px;
+}
+
+.logo {
+	padding-left: 30px;
+	align-self: center;
+	color: darkblue;
+}
+
+.nav-menu {
+	align-self: center;
+	padding-right: 30px;
+}
+
+.nav-menu {
+	display: flex;
+	gap: 10px;
+}
+
+.cart,
+.admin {
+	color: darkblue;
+	display: flex;
+	gap: 5px;
+	border: 1.5px solid darkblue;
+	border-radius: 5px;
+	padding: 3px;
+	cursor: pointer;
+}
