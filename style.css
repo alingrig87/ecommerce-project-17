@@ -8,7 +8,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
-.navbar {
+.main-navbar {
 	display: flex;
 	justify-content: space-between;
 	background-color: lightsteelblue;
@@ -40,4 +40,11 @@ body {
 	border-radius: 5px;
 	padding: 3px;
 	cursor: pointer;
+}
+
+.products-container {
+	padding: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 20px;
 }
