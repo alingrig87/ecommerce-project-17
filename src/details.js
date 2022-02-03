@@ -41,15 +41,24 @@ async function addToCart(event) {
 	const result = await fetch(productURL);
 	const product = await result.json();
 
-	let cart;
+	let cart = [];
 	if (localStorage.getItem('cart') == null) {
-		cart = [product];
+		cart.push({ ...product, noOfProducts: 1 });
 	} else {
 		cart = JSON.parse(localStorage.getItem('cart'));
-		cart.push(product);
+		const productInCart = cart.find(
+			(productFromCart) => productFromCart.id == product.id
+		);
+		if (productInCart != undefined) {
+			productInCart.noOfProducts++;
+			console.log('Produsul exista in cos');
+		} else {
+			const productToBeAddedInCart = { ...product, noOfProducts: 1 };
+			cart.push(productToBeAddedInCart);
+			console.log('Produsul a fost adaugat prima oara in cos');
+		}
 	}
 
 	console.log(cart);
-
-	localStorage.setItem('cart', JSON.stringify(cart));
+	if (cart.length > 0) localStorage.setItem('cart', JSON.stringify(cart));
 }

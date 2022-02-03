@@ -48,3 +48,8 @@ body {
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 20px;
 }
+
+.no-of-products {
+	margin: 0 5px;
+	font-size: 20px;
+}
