@@ -53,3 +53,19 @@ body {
 	margin: 0 5px;
 	font-size: 20px;
 }
+
+.admin-products {
+	width: 700px;
+	margin: auto;
+}
+
+.add-product {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.new-product-form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
